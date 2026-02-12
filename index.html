@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Netflix Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+            z-index: 100;
+        }
+
+        .logo {
+            color: #e50914;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .signin-btn {
+            background-color: #e50914;
+            border: none;
+            padding: 8px 18px;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .signin-btn:hover {
+            background-color: #f6121d;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 95vh;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4)),
+                        url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1600&q=80") 
+                        no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 60px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            max-width: 600px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .hero button {
+            width: 200px;
+            padding: 12px;
+            background-color: #e50914;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #f6121d;
+        }
+
+        /* MOVIE ROWS */
+        .row {
+            margin: 40px 60px;
+        }
+
+        .row h2 {
+            margin-bottom: 15px;
+        }
+
+        .movies {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .movies::-webkit-scrollbar {
+            display: none;
+        }
+
+        .movies img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 6px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .movies img:hover {
+            transform: scale(1.1);
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: gray;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 768px) {
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .navbar {
+                padding: 20px;
+            }
+
+            .row {
+                margin: 30px 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">NETFLIX</div>
+        <button class="signin-btn">Sign In</button>
+    </div>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <h1>Unlimited movies, TV shows and more.</h1>
+        <p>Watch anywhere. Cancel anytime.</p>
+        <button>Get Started</button>
+    </div>
+
+    <!-- MOVIE ROW 1 -->
+    <div class="row">
+        <h2>Popular on Netflix</h2>
+        <div class="movies">
+    <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="The Dark Knight">
+    <img src="https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" alt="Avengers Endgame">
+    <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7c6f0a3WbdrsA1rP6qB.jpg" alt="Joker">
+    <img src="https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg" alt="Interstellar">
+    <img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" alt="Inception">
+    <img src="https://image.tmdb.org/t/p/w500/5BwqwxMEjeFtdknRV792Svo0K1v.jpg" alt="Spider-Man">
+</div>
+
+    </div>
+
+    <!-- MOVIE ROW 2 -->
+    <div class="row">
+        <h2>Trending Now</h2>
+        <div class="movies">
+    <img src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg" alt="Avengers Infinity War">
+    <img src="https://image.tmdb.org/t/p/w500/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg" alt="John Wick">
+    <img src="https://image.tmdb.org/t/p/w500/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg" alt="Black Panther">
+    <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="The Conjuring">
+    <img src="https://image.tmdb.org/t/p/w500/6agKYU5IQFpuDyUYPu39w7UCRrJ.jpg" alt="Dune">
+    <img src="https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg" alt="Top Gun Maverick">
+</div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 Netflix Clone | Built for Practice
+    </div>
+
+</body>
+</html>
